@@ -18,6 +18,8 @@ public class EnemyAI : MonoBehaviour
         Death
     }
 
+    public static EnemyAI Instance { get; private set; }
+
     [SerializeField] private State _startingState;
 
     [Header("Movement & Patrol")]
@@ -79,6 +81,8 @@ public class EnemyAI : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
+
         foreach (Transform point in _patrolPoints)
         {
             _fixedPatrolPositions.Add(point.position);

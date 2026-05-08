@@ -9,13 +9,13 @@ public class PlayerVisual : MonoBehaviour
 
     private void Awake()
     {
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
-        //animator.SetBool(IS_RUNNING, Player.Instance.IsRunning());
+        animator.SetBool(IS_RUNNING, Player.Instance.IsRunning());
         AdJustPlayerFacingDirection();
     }
 

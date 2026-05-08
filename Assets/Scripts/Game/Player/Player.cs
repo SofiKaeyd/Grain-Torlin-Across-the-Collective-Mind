@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
+
     }
 
     private void GameInput_OnPlayerAttack(object sender, System.EventArgs e)
@@ -108,6 +108,8 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         _impulseSource.GenerateImpulse(Vector3.one);
+        EffectsManager.HitStop(0.05f);    // Заморозка на 50 миллисекунд
+
         Health -= damage;
         IsIFrames = true;
         if (Health <= 0) Die();
