@@ -1,12 +1,15 @@
 using System;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class MouseManager : MonoBehaviour
 {
     private static MouseManager _instance;
     private List<IClickable> _clickables = new List<IClickable>();
+    private Camera _cachedCamera;
 
+    public static Camera ActiveCamera => _instance._cachedCamera;
     public static Action<Collider2D> OnClick { get; set; }
 
     void Awake()
@@ -15,9 +18,32 @@ public class MouseManager : MonoBehaviour
         {
             _instance = this;
             DontDestroyOnLoad(gameObject);
+            UpdateCameraCache();
         }
         else
             Destroy(gameObject);
+
+        CinemachineCore.CameraActivatedEvent.AddListener(OnCameraActivated);
+    }
+
+    private void OnCameraActivated(ICinemachineCamera.ActivationEventParams arg0)
+    {
+        UpdateCameraCache();
+    }
+
+    private void UpdateCameraCache()
+    {
+        var brain = FindFirstObjectByType<Unity.Cinemachine.CinemachineBrain>();
+        if (brain != null && brain.OutputCamera != null)
+        {
+            _cachedCamera = brain.OutputCamera;
+            return;
+        }
+
+        _cachedCamera = Camera.main;
+
+        if (_cachedCamera == null)
+            _cachedCamera = FindAnyObjectByType<Camera>();
     }
 
     public static void AddClickable(IClickable clickable)
@@ -39,10 +65,23 @@ public class MouseManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            var mousePosition = CameraManager.MainCamera.ScreenToWorldPoint(Input.mousePosition);
+            if (_cachedCamera == null)
+                UpdateCameraCache();
+            if (_cachedCamera == null)
+            {
+                Debug.LogWarning("[MouseManager] No camera found in scene. Click ignored.");
+                return;
+            }
+
+            var mousePosition = _cachedCamera.ScreenToWorldPoint(Input.mousePosition);
             var hit = Physics2D.Raycast(mousePosition, Vector2.zero);
             Debug.Log(hit.collider);
-            OnClick(hit.collider);
+            OnClick?.Invoke(hit.collider);
         }
+    }
+
+    private void OnDestroy()
+    {
+        CinemachineCore.CameraActivatedEvent.RemoveListener(OnCameraActivated);
     }
 }

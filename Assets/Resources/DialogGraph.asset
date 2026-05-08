@@ -1,0 +1,272 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06cd0dbdf4da41643ae5e9cefb7f1e39, type: 3}
+  m_Name: DialogGraph
+  m_EditorClassIdentifier: Assembly-CSharp::DialogGraph
+  Relations:
+  - ParentID: 0
+    ChildID: 1
+  - ParentID: 0
+    ChildID: 2
+  - ParentID: 0
+    ChildID: 3
+  - ParentID: 1
+    ChildID: 4
+  - ParentID: 2
+    ChildID: 5
+  - ParentID: 3
+    ChildID: 6
+  - ParentID: 4
+    ChildID: 7
+  - ParentID: 5
+    ChildID: 7
+  - ParentID: 6
+    ChildID: 7
+  - ParentID: 7
+    ChildID: 8
+  - ParentID: 8
+    ChildID: 9
+  - ParentID: 9
+    ChildID: 10
+  - ParentID: 9
+    ChildID: 11
+  - ParentID: 10
+    ChildID: 12
+  - ParentID: 12
+    ChildID: 18
+  - ParentID: 11
+    ChildID: 13
+  - ParentID: 13
+    ChildID: 14
+  - ParentID: 14
+    ChildID: 15
+  - ParentID: 15
+    ChildID: 16
+  - ParentID: 16
+    ChildID: 17
+  Nodes:
+  - Id: 0
+    Speaker: "\u042D\u043D\u0437\u043E \u0424\u0430\u0440\u043D"
+    Text: "\u041D\u0443 \u043D\u0430\u043A\u043E\u043D\u0435\u0446 \u0442\u044B \u043F\u0440\u0438\u0448\u0435\u043B.
+      \u0421\u043A\u043E\u043B\u044C\u043A\u043E \u043C\u043E\u0436\u043D\u043E \u0443\u0436\u0435
+      \u0436\u0434\u0430\u0442\u044C!"
+    IsPlayer: 0
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 
+    ChildrenIds: 010000000200000003000000
+  - Id: 1
+    Speaker: Player
+    Text: "\u042F \u043F\u0435\u0440\u0435\u0432\u043E\u0434\u0438\u043B \u0431\u0430\u0431\u0443\u0448\u043A\u0443
+      \u0447\u0435\u0440\u0435\u0437 \u0434\u043E\u0440\u043E\u0433\u0443."
+    IsPlayer: 1
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 00000000
+    ChildrenIds: 04000000
+  - Id: 2
+    Speaker: Player
+    Text: "\u0411\u044B\u043B\u0438 \u0441\u0432\u043E\u0438 \u0434\u0435\u043B\u0430."
+    IsPlayer: 1
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 00000000
+    ChildrenIds: 05000000
+  - Id: 3
+    Speaker: Player
+    Text: "\u041F\u0440\u043E\u0448\u0443 \u043F\u0440\u043E\u0449\u0435\u043D\u0438\u044F,
+      \u042D\u043D\u0437\u043E. \u042D\u0442\u043E\u0433\u043E \u043D\u0435 \u043F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0441\u044F."
+    IsPlayer: 1
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 00000000
+    ChildrenIds: 06000000
+  - Id: 4
+    Speaker: "\u042D\u043D\u0437\u043E \u0424\u0430\u0440\u043D"
+    Text: "\u0411\u043B\u0430\u0433\u0438\u0435 \u0434\u0435\u043B\u0430 \u0431\u043B\u0430\u0433\u0438\u0435,
+      \u0435\u0441\u043B\u0438 \u043E\u043D\u0438 \u0440\u0435\u0430\u043B\u044C\u043D\u044B,
+      \u0430 \u043D\u0435 \u044F\u0432\u043B\u044F\u044E\u0442\u0441\u044F \u043E\u0442\u043C\u0430\u0437\u043A\u0430\u043C\u0438!"
+    IsPlayer: 0
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 01000000
+    ChildrenIds: 07000000
+  - Id: 5
+    Speaker: "\u042D\u043D\u0437\u043E \u0424\u0430\u0440\u043D"
+    Text: "\u041A\u0430\u043A \u0436\u0435. \u0422\u0432\u043E\u0451 \u0434\u0435\u043B\u043E
+      \u0441\u0435\u0439\u0447\u0430\u0441 \u2013 \u043F\u043E\u043C\u043E\u0433\u0430\u0442\u044C
+      \u043C\u043D\u0435."
+    IsPlayer: 0
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 02000000
+    ChildrenIds: 07000000
+  - Id: 6
+    Speaker: "\u042D\u043D\u0437\u043E \u0424\u0430\u0440\u043D"
+    Text: "\u041D\u0430\u0434\u0435\u044E\u0441\u044C \u043D\u0430 \u044D\u0442\u043E."
+    IsPlayer: 0
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 03000000
+    ChildrenIds: 07000000
+  - Id: 7
+    Speaker: "\u042D\u043D\u0437\u043E \u0424\u0430\u0440\u043D"
+    Text: "\u0418 \u0441\u043E\u0431\u0435\u0440\u0438\u0441\u044C. \u041C\u044B
+      \u0441\u043E\u0437\u0434\u0430\u0434\u0438\u043C \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u0443\u044E
+      \u044D\u043D\u0435\u0440\u0433\u0438\u044E, {0}!"
+    IsPlayer: 0
+    Parameters: UserName
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 040000000500000006000000
+    ChildrenIds: 08000000
+  - Id: 8
+    Speaker: "\u042D\u043D\u0437\u043E \u0424\u0430\u0440\u043D"
+    Text: "\u042D\u0442\u043E \u0431\u0443\u0434\u0435\u0442 \u043A\u0440\u043E\u043F\u043E\u0442\u043B\u0438\u0432\u0430\u044F
+      \u0438 \u0443\u0441\u0435\u0440\u0434\u043D\u0430\u044F \u0434\u043B\u044F
+      \u043D\u0430\u0441 \u043E\u0431\u043E\u0438\u0445 \u0440\u0430\u0431\u043E\u0442\u0430.
+      \u0422\u0435\u0431\u0435 \u0432\u044B\u043F\u0430\u043B\u0430 \u0447\u0435\u0441\u0442\u044C
+      \u043F\u043E\u043C\u043E\u0433\u0430\u0442\u044C \u043C\u043D\u0435 \u0441
+      \u044D\u0442\u0438\u043C \u0434\u0435\u043B\u043E\u043C!"
+    IsPlayer: 0
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 07000000
+    ChildrenIds: 09000000
+  - Id: 9
+    Speaker: "\u042D\u043D\u0437\u043E \u0424\u0430\u0440\u043D"
+    Text: "\u0418\u0442\u0430\u043A, \u0441\u043D\u0430\u0447\u0430\u043B\u0430 \u043F\u043E\u043A\u0430\u0436\u0438
+      \u043D\u0435 \u0440\u0430\u0441\u0442\u0435\u0440\u044F\u043B \u043B\u0438
+      \u0442\u044B \u043D\u0430\u0432\u044B\u043A\u0438 \u0437\u0430 \u0432\u0440\u0435\u043C\u044F,
+      \u0447\u0442\u043E \u043C\u044B \u043D\u0435 \u0432\u0438\u0434\u0435\u043B\u0438\u0441\u044C.
+      \u0421\u043E\u0431\u0435\u0440\u0438 \u044D\u0442\u0443 \u043F\u0440\u043E\u0441\u0442\u0435\u0439\u0448\u0443\u044E
+      \u0441\u0445\u0435\u043C\u0443. \u0422\u0435\u0431\u0435 \u043D\u0430\u0434\u043E
+      \u043D\u0430\u043F\u043E\u043C\u043D\u0438\u0442\u044C \u0430\u0437\u044B?"
+    IsPlayer: 0
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 08000000
+    ChildrenIds: 0a0000000b000000
+  - Id: 10
+    Speaker: Player
+    Text: "\u0421\u0430\u043C \u0441\u043F\u0440\u0430\u0432\u043B\u044E\u0441\u044C."
+    IsPlayer: 1
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 09000000
+    ChildrenIds: 0c000000
+  - Id: 11
+    Speaker: Player
+    Text: "\u0414\u0430, \u043F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430."
+    IsPlayer: 1
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 09000000
+    ChildrenIds: 0d000000
+  - Id: 12
+    Speaker: "\u042D\u043D\u0437\u043E \u0424\u0430\u0440\u043D"
+    Text: "\u041D\u0443 \u0441\u043C\u043E\u0442\u0440\u0438. \u041F\u043E\u043C\u043E\u0433\u0430\u0442\u044C
+      \u044F \u0442\u0435\u0431\u0435 \u043D\u0435 \u0441\u043E\u0431\u0438\u0440\u0430\u044E\u0441\u044C."
+    IsPlayer: 0
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 0a000000
+    ChildrenIds: 12000000
+  - Id: 13
+    Speaker: "\u042D\u043D\u0437\u043E \u0424\u0430\u0440\u043D"
+    Text: "\u0412\u0441\u0435 \u0432\u0430\u043C \u043E\u0431\u044A\u044F\u0441\u043D\u044F\u0439\u2026
+      \u041B\u0430\u0434\u043D\u043E, \u0441\u043B\u0443\u0448\u0430\u0439 \u0432\u043D\u0438\u043C\u0430\u0442\u0435\u043B\u044C\u043D\u043E."
+    IsPlayer: 0
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 0b000000
+    ChildrenIds: 0e000000
+  - Id: 14
+    Speaker: "\u042D\u043D\u0437\u043E \u0424\u0430\u0440\u043D"
+    Text: "\u041D\u0430\u0436\u0438\u043C\u0430\u0439 \u043D\u0430 \u043F\u0440\u043E\u0432\u043E\u0434\u0430,
+      \u0447\u0442\u043E\u0431\u044B \u0441\u043E\u0431\u0440\u0430\u0442\u044C \u0438\u0445
+      \u0432 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u0443\u044E \u043A\u043E\u043C\u0431\u0438\u043D\u0430\u0446\u0438\u044E.
+      \u0420\u0430\u0431\u043E\u0442\u0430 \u0441\u0447\u0438\u0442\u0430\u0435\u0442\u0441\u044F
+      \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u043D\u043E\u0439, \u0435\u0441\u043B\u0438
+      \u044D\u043D\u0435\u0440\u0433\u0438\u044F \u043F\u0440\u043E\u0432\u0435\u0434\u0435\u043D\u0430
+      \u0438\u0437 \u0438\u0441\u0442\u043E\u0447\u043D\u0438\u043A\u0430 \u0432
+      \u043F\u043E\u043B\u0443\u0447\u0430\u0442\u0435\u043B\u044C."
+    IsPlayer: 0
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 0d000000
+    ChildrenIds: 0f000000
+  - Id: 15
+    Speaker: "\u042D\u043D\u0437\u043E \u0424\u0430\u0440\u043D"
+    Text: "\u0421\u043C\u043E\u0442\u0440\u0438 \u043D\u0435 \u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0439
+      \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u043D\u044B\u0435 \u043F\u0440\u043E\u0432\u043E\u0434\u0430
+      \u0432 \u0432\u043E\u0437\u0434\u0443\u0445\u0435! \u0412\u0441\u0435 \u043E\u0431\u044F\u0437\u0430\u043D\u043E
+      \u0431\u044B\u0442\u044C \u0433\u0435\u0440\u043C\u0435\u0442\u0438\u0447\u043D\u044B\u043C."
+    IsPlayer: 0
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 0e000000
+    ChildrenIds: 10000000
+  - Id: 16
+    Speaker: "\u042D\u043D\u0437\u043E \u0424\u0430\u0440\u043D"
+    Text: "\u0418 \u043D\u0435 \u0437\u0430\u0431\u044B\u0432\u0430\u0439 \u043E
+      \u043F\u0440\u0430\u0432\u0438\u043B\u0430\u0445 \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438."
+    IsPlayer: 0
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 0f000000
+    ChildrenIds: 11000000
+  - Id: 17
+    Speaker: "\u042D\u043D\u0437\u043E \u0424\u0430\u0440\u043D"
+    Text: "\u0413\u043E\u0442\u043E\u0432?"
+    IsPlayer: 0
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 10000000
+    ChildrenIds: 
+  - Id: 18
+    Speaker: Player
+    Text: "\u041F\u0440\u0438\u0441\u0442\u0443\u043F\u0438\u043C."
+    IsPlayer: 1
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 0c000000
+    ChildrenIds: 
+  - Id: 19
+    Speaker: Player
+    Text: "\u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u0435 \u0435\u0449\u0451
+      \u0440\u0430\u0437."
+    IsPlayer: 1
+    Parameters: 
+    Conditions: 
+    IsCorrect: 1
+    ParentIds: 
+    ChildrenIds: 
+  QuestionsCount: 0
